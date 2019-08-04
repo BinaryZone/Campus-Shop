@@ -9,7 +9,7 @@
 	<!-- 每天生成一个日志文件，保存30天的日志文件 -->
 	<property name="log.maxHistory" value="30"/>
 	<!-- ${catalina.base}表示Tomcat实例的根目录 -->
-	<property name="log.filePath" value="${catalina.base}/logs/webapp"/>
+	<property name="log.filePath" value="${catalina.base}/logs"/>
 	<!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符-->
 	<property name="log.pattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{55} -%msg%n"/>
 	

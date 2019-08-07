@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.Date;
 
 import org.apache.commons.io.IOUtils;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mock.web.MockMultipartFile;
@@ -23,6 +24,16 @@ public class ShopServiceTest extends BaseTest{
 	@Autowired
 	private ShopService shopService;
 	@Test
+	public void testModifyShop() throws IOException {
+		Shop shop = new Shop();
+		shop.setShopId(20L);
+		shop.setShopName("修改店铺测试");
+		String filePath = "E:\\eclipsejavaee\\o2o\\images\\cat.jpg";
+		shopService.modifyShop(shop, path2MultipartFile(filePath));
+		System.out.println("修改后图片：" + shop.getShopImg());
+	}
+	@Test
+	@Ignore
 	public void testAddShop() throws IOException {
 		Shop shop = new Shop();
 		PersonInfo owner = new PersonInfo();
